@@ -7,7 +7,6 @@
 #include <stdexcept>
 #include <iostream>
 
-// Excepción personalizada
 class CalificacionesException : public std::exception {
 private:
     std::string mensaje;
@@ -18,17 +17,17 @@ public:
     }
 };
 
-// Estructura del estudiante
 struct Estudiante {
     int id;
     std::string nombre;
     std::string apellido;
 
+    Estudiante() : id(0), nombre(""), apellido("") {} // Constructor por defecto
+
     Estudiante(int id, const std::string& nombre, const std::string& apellido)
         : id(id), nombre(nombre), apellido(apellido) {}
 };
 
-// Clase principal del sistema
 class SistemaCalificaciones {
 private:
     std::map<int, Estudiante> estudiantes;

@@ -131,6 +131,7 @@ void SistemaCalificaciones::mostrarMejoresEstudiantes() const {
 
     for (int id : mejores) {
         const auto& est = estudiantes.at(id);
-        std::cout << est.nombre << " " << est.apellido << " con promedio " << std::fixed << std::setprecision(2) << mejorPromedio << std::endl;
+        std::cout << est.nombre << " " << est.apellido << " con promedio "
+                  << std::fixed << std::setprecision(2) << mejorPromedio << std::endl;
     }
 }
